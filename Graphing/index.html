@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Graphing</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<h1>Graphing</h1>
+	<hr>
+	<p>f(x)
+		<select id = 'relation' oninput='updateGraph()'>
+      <option value = '='> = </option>
+      <option value = '<'> < </option>
+      <option value = '>'> > </option>
+      <option value = '≤'> ≤ </option>
+      <option value = '≥'> ≥ </option>
+    </select>
+    <input type="text" id='f' oninput='updateGraph()'> <button id='add-btn'>add</button><br>
+    Colour: <input type="text" id='colour' oninput = 'updateGraph()'>
+  </p>
+  <em>
+    <!-- Function: use javascript notation (
+    <a href="https://www.w3schools.com/js/js_arithmetic.asp" target="_blank">arithmetic</a>,
+    <a href="https://www.w3schools.com/jsref/jsref_obj_math.asp" target="_blank">functions</a>
+    ) and variable x.  -->
+    Example: 3*sin(x-PI/4)+E**2  
+    <!-- (the "Math." prefix may be omitted.) -->
+  </em>
+  <br>
+  <em>Colours: <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">colours</a> </em> <br> <br>
+  Remove Function: <input type="number" id='deleteFunc' min=1> <button onclick = 'removeFunc()'>Remove</button> 
+  <p>Functions List <button onclick = 'toggleDispF()' id='toggleText'>Hide</button> <br> 
+    <span id='dispFuncs'></span>
+  </p> 
+  <p id='cord'>(x, y)</p>
+  <canvas id='c'></canvas><br>
+  <em>Click and drag on graph to adjust window, scroll to zoom.</em>
+  <p>
+    Evaluate:
+    f <input type="number" id='funcListIndex' oninput='updateGraph()' min=1>
+    (<input type="number" id='inpVal' oninput='updateGraph()' >) <br>
+    <em>format: f[function number (leave blank to evaluate preview function)](value to be evaluated)</em> <br>
+    <span id='evalRel'>=</span> <span id='outVal'>value</span>
+  </p>
+  <p> Window Settings 
+    <div id = 'winSettings'>
+      <div>
+        <label>
+          <span>Xmin = </span>
+          <input type="number" id= 'x-min-in' value = '-10' step = '5' oninput='updateGraph()'> 
+        </label>
+        <label>
+          <span>Xmax = </span>
+          <input type="number" id= 'x-max-in' value = '10' step = '5' oninput='updateGraph()'> 
+        </label>
+        <label>
+          <span>Xscl = </span>
+          <input type="number" id= 'x-scl-in' min='0' step = '5' oninput='updateGraph()' value = '1'> 
+        </label>
+      </div>
+      <div>
+        <label>
+          <span>Ymin = </span>
+          <input type="number" id= 'y-min-in' value = '-10' step = '5' oninput='updateGraph()'> 
+        </label>
+        <label>
+          <span>Ymax = </span>
+          <input type="number" id= 'y-max-in' value = '10' step = '5' oninput='updateGraph()'> 
+        </label>
+        <label>
+          <span>Yscl = </span>
+          <input type="number" id= 'y-scl-in' min='0' step = '5' oninput='updateGraph()' value = '1'> 
+        </label>
+      </div>
+    </div><br>
+
+    Auto Scale<input type="checkbox" id='autoScale' oninput = 'updateGraph()' checked = 'checked'>
+    <button onclick='resetWindow()'>Reset</button>
+    <br>
+    <em id='error' style="display:none">error: invalid domain/range</em>
+  </p>
+      
+  <script src = 'graphics-library.js'></script>
+  <script src="math-library.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

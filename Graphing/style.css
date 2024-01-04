@@ -1,0 +1,68 @@
+body{
+  width: 1100px;
+  background-color: rgba(144, 197, 228, 0.89);
+  margin:auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 50px;
+  padding-top: 8px;
+  border-radius : 15px;
+}
+html{
+  text-align: center;
+  background-image: url(images/background.jpg);
+  /* background-image: url(images/background2.jpg); */
+  /* background-image: url(images/background3.jpg); */
+  background-size: cover;
+}
+input[type=number],input[type=text] {
+  width: 60px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  text-align: center;
+}
+#f{
+  width:400px;
+}
+#error{
+  color: darkred;
+}
+#cord{
+  text-align: right;
+  margin-right: 200px; 
+  margin-top: 0px;
+  margin-bottom:0px;
+}
+#inpVal{
+  height:17px;
+  font-size: 15px;
+  width: 70px;
+}
+a:hover{
+  color: green;
+}
+#colour{
+  width: 150px;
+}
+#funcListIndex, #deleteFunc{
+  width: 50px;
+  height: 17px;
+  font-size: 15px;
+}
+button{
+  padding: 3px 6px ;
+}
+
+label{
+    display: block;
+}
+label span{
+    display: inline-block;
+    text-align: right;
+    width: 60px;
+}
+#winSettings{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
