@@ -11,7 +11,7 @@
 <body>
 	<h1>Graphing</h1>
 	<hr>
-	<p>f(x)
+	<p>y
 		<select id = 'relation' oninput='updateGraph()'>
       <option value = '='> = </option>
       <option value = '<'> < </option>
@@ -27,7 +27,7 @@
     <a href="https://www.w3schools.com/js/js_arithmetic.asp" target="_blank">arithmetic</a>,
     <a href="https://www.w3schools.com/jsref/jsref_obj_math.asp" target="_blank">functions</a>
     ) and variable x.  -->
-    Example: 3*sin(x-PI/4)+E**2  
+    Example: E**(x/5)*sin(5*x-PI/3)
     <!-- (the "Math." prefix may be omitted.) -->
   </em>
   <br>
@@ -41,9 +41,9 @@
   <em>Click and drag on graph to adjust window, scroll to zoom.</em>
   <p>
     Evaluate:
-    f <input type="number" id='funcListIndex' oninput='updateGraph()' min=1>
+    y <input type="number" id='funcListIndex' oninput='updateGraph()' min=1>
     (<input type="number" id='inpVal' oninput='updateGraph()' >) <br>
-    <em>format: f[function number (leave blank to evaluate preview function)](value to be evaluated)</em> <br>
+    <em>format: y[function number (leave blank to evaluate preview function)](value to be evaluated)</em> <br>
     <span id='evalRel'>=</span> <span id='outVal'>value</span>
   </p>
   <p> Window Settings 

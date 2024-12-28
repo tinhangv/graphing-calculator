@@ -53,7 +53,7 @@ function updateGraph() {
     dispFuncsEl.innerHTML = ''
     for (var i = 0; i < func.list.length; i++) {
       drawFunction(func.list[i], func.colour[i], func.rel[i])
-      dispFuncsEl.innerHTML += (i + 1) + ':  f' + (i + 1) + '(x) ' + func.rel[i] + ' ' + func.list[i] + '  , colour:' + func.colour[i] + '<br>'
+      dispFuncsEl.innerHTML += (i + 1) + ':  y' + (i + 1) + func.rel[i] + ' ' + func.list[i] + '  , colour:' + func.colour[i] + '<br>'
     }
     drawFunction(funcIn.value, colour.value, select.value)
   }
